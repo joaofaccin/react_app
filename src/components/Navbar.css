@@ -1,0 +1,152 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img {
+    width: 200px;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #18181B;
+}
+
+nav {
+    background-color: rgb(46 51 107);
+    width: auto;
+    margin: auto;
+    padding: 1rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo {
+    max-width: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #cc8f31;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 70%;
+}
+
+/* Media query para telas pequenas */
+@media (max-width: 768px) {
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        /* Adapte o padding conforme necessário */
+        background-color: rgb(46 51 107);
+    }
+
+    .nav-logo img {
+        max-width: 100px;
+    }
+
+    .menu-button {
+        background: none;
+        border: none;
+        font-size: 24px;
+        /* Ajuste o tamanho do ícone conforme necessário */
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        /* Ocultar links por padrão */
+        list-style: none;
+        align-items: end;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links.show {
+        display: block;
+        /* Mostrar links quando o menu está aberto */
+    }
+
+    .link {
+        margin: 0 10px;
+        /* Ajuste a margem entre os links conforme necessário */
+    }
+
+    /* Estilos responsivos */
+    @media (max-width: 768px) {
+
+        .nav-links {
+            flex-direction: column;
+            /* Coloque os links em coluna no mobile */
+            position: absolute;
+            top: 60px;
+            /* Ajuste conforme a altura da navbar */
+            left: 0;
+            width: 100%;
+            background-color: rgb(46 51 107);
+            ;
+            /* Fundo do menu dropdown */
+        }
+
+        .link {
+            padding: 10px 20px;
+            /* Estilo para os links no mobile */
+        }
+    }
+
+}
+
+/* Estilo para um botão de menu (hamburguer) */
+.menu-button {
+    display: none;
+    /* Esconde o botão por padrão */
+}
+
+/* Mostra o botão de menu em telas pequenas */
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+        /* Mostra o botão de menu em telas menores */
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        /* Ajuste o tamanho conforme necessário */
+        cursor: pointer;
+    }
+}

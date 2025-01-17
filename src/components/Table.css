@@ -1,0 +1,37 @@
+.table-container {
+    background-color: #2e336b; /* Cor de fundo cinza claro */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas (opcional) */
+    margin: 10px auto; /* Margem em cima e embaixo, centralizado */
+    max-width: 700px; /* Largura máxima do contêiner */
+}
+h2  {
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    margin-top: 20px; /* Margem superior opcional */
+    border-bottom: 2px solid #d89732; /* Linha abaixo do texto */
+}
+
+.table {
+    width: 50%; /* Largura da tabela */
+    max-width: 600px; /* Limite máximo de largura */
+    border-collapse: collapse; /* Remove espaços entre as bordas */
+    margin: 20px auto; /* Centraliza a tabela horizontalmente e adiciona margem superior e inferior */
+    background-color: white; /* Fundo da tabela */
+}
+
+.table th,
+.table td {
+    border: 1px solid #dee2e6; /* Borda das células */
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    color: black; /* Cor do texto */
+}
+
+.table th {
+    background-color: white; /* Fundo do cabeçalho */
+    font-weight: bold; /* Negrito no cabeçalho */
+}
+
+
